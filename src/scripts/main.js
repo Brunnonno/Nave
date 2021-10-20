@@ -9,7 +9,7 @@ function start() {
     $("#fundoGame").append("<div id='energia'></div>");
     
     var jogo = {}
-    var TECLA = { W: 38, S: 40, D: 68 }
+    var TECLA = { W: 87, S: 40, D: 68, E: 32, Q: 38, A: 83}
     var velocidade = 5;
     var posicaoY = parseInt(Math.random() * 334);
     var podeAtirar = true;
@@ -39,7 +39,7 @@ function start() {
         jogo.pressionou[e.which] = false;
     });
     
-    // função de looping
+    // função de loopingqq
     function loop() {
         moveFundo();
         moveJogador();
@@ -67,8 +67,8 @@ function start() {
             if (topo<=0) {
                 $("#jogador").css("top",topo + 10);
             }
-        }
-
+            
+        }        
         if (jogo.pressionou[TECLA.S]) {
             var topo = parseInt($("#jogador").css("top"));
             $("#jogador").css("top",topo + 10);
@@ -79,7 +79,36 @@ function start() {
             }
         }
         
+
+
+        if (jogo.pressionou[TECLA.Q]) {
+            var topo = parseInt($("#jogador").css("top"));
+            $("#jogador").css("top",topo - 10);
+
+            // limitando o helicóptero no topo da página
+            if (topo<=0) {
+                $("#jogador").css("top",topo + 10);
+            }
+            
+        }        
+        if (jogo.pressionou[TECLA.A]) {
+            var topo = parseInt($("#jogador").css("top"));
+            $("#jogador").css("top",topo + 10);
+
+            // limitando o helicóptero no final da página
+            if (topo>=434) {	
+                $("#jogador").css("top",topo - 10);		
+            }
+        }
+
+
+
+
+
         if (jogo.pressionou[TECLA.D]) {
+            disparo(); // chama função disparo	
+        }
+        if (jogo.pressionou[TECLA.E]) {
             disparo(); // chama função disparo	
         }
     }

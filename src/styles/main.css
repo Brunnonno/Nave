@@ -12,11 +12,18 @@ h1 {
 }
 
 body {
-	background-image: url(../assets/images/fundo.jpg);
+background-image: url(../assets/images/fundo.jpg);
+}
+div.wrap {
+	height:100%;
+	overflow: hidden;
+}
+body {
+	overflow: hidden;
 }
 
 #container{
-	width: 950px;
+	width: 900px;
 	height: auto;
 	position: relative;
 	margin-left: auto;
