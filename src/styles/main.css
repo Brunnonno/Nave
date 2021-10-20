@@ -23,7 +23,7 @@ body {
 }
 
 #container{
-	width: 900px;
+	width: 990px;
 	height: auto;
 	position: relative;
 	margin-left: auto;
@@ -32,8 +32,8 @@ body {
 
 
 #fundoGame {
-	width: 950px;
-	height: 630px;
+	width: 990px;
+	height: 600px;
 	background-image: url(../assets/images/fundo_game.jpg);
 	border-color: #FFF;
 	border-style: solid;
@@ -233,7 +233,7 @@ body {
 #placar {
 	width: 450px;
 	height: 50px;
-	position: absolute;
+	position: up;
 	left: 5px;
 	top: 590px;
 }
